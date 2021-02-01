@@ -14,6 +14,9 @@ This is our code 301 Final Project while at Code Fellows. This is an app that he
 
 ## Change Log
 
+**Timestamp  - Description**
+1612219947   - Initial set-up of database (table, schema, seed) and server
+
 ## Credits and Collaborations
 
 Nich Carignan
