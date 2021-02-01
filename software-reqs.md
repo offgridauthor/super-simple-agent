@@ -28,15 +28,32 @@ We aim to deliver a clean, RESTful app that assists users with figuring out exac
 
 ## MVP
 
-
+MVP:
+Frontend: 
+Search form that takes in API search URL that the developer wants to get information on 
+Give options to save Search, along with users “codename” and time stamp
+User selects category if there’s an applicable one
+If do not know other relevant API, share previous searches that have been made
+Display of the returned targeted API information the user was seeking
+Save to a public db that shows previous searches
+Good error messaging on the input from user to make sure they are giving us the right info
+Display info on API’s related to category user selected or random API’s if they didn’t input a category
+Collection page that shows saved user searches with “codename” and time stamp
+CSS styling mobile first view, + desktop for the form (STRETCH: other relevant information about the API as applicable) -- Mobile First (but basic desktop)
+Syntax highlighting
+Backend:
+Grabs the jSON object from the targeted API and displays requested key: value pairs
+DB that stores the API information (key/value pairs and URLs) for future reference (STRETCH: captured into project specific tables)
 
 ## Stretch Goals
 
 1. Convert retrieved data into strings that directly access the each key value pair of the return JSON
 
-1. Use regex to highlight key values in different colors on the JSON display.
+1. Use regex to highlight key values in different colors on the JSON display. (research libraries)
 
 1. Click to save to clipboard.
+
+1. Private key logic (disable save button)
 
 ## Functional Requirements
 
@@ -48,6 +65,8 @@ We aim to deliver a clean, RESTful app that assists users with figuring out exac
 
 - A user can view information about the creators of the website
 
+- A user can navigate to anywhere from anywhere
+
 ### Data Flow
 
 The user navigates to the site. LocalStorage checks to see if user has visited before. If user hasn't visited, LocalStorage notes that they now have and the site displays an alert informing user to not use urls with API keys. User sees a form that asks for a public API search url and inputs their search along with an option to select a category. If there is any issue with search an error alert is displayed and the reason for the error. If there's no issue, our server used superagent to communicate with said API and displays the returned JSON result along with a form at the bottom to input a "codename" and save the search to our DB. In addition to the results we will use the category selection to hit the PAPI for PAPI's and display info on API's from that category as suggestions for other API's our user might want to use. If user didn't select category we will display info on random API's. From there user can continue searching or use the navigation to check out our about us page which will display the expected info or check out the collection page. The collection page will take info from our DB and display all of the saved searches with code names and time stamps. 
@@ -57,5 +76,3 @@ The user navigates to the site. LocalStorage checks to see if user has visited b
 - Security: this websit will not be not be protecting the information it transfers so it's important to alert our users not to use urls with API keys via a site disclaimer. We could use local storage to determine whether a user has visited our site before and display an alert on navigating to the page to confirm that the user is aware of this.
 
 - Usability: On this website you should be able to navigate from any given page to any of the others. There shouldn't be any dead ends. Fields that the user needs to input into in order to proceed should be displayed prominently with contrasting colors that meet the 2 check mark industry standard. Errors should be visible, explanatory and prominently display so users know whether there's a problem with their input our server or the API they're trying to access.
-
-- 
