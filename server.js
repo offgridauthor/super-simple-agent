@@ -28,13 +28,13 @@ app.get('/collection', getSavedSearches);
 app.get('/recommendation', getRecApis);
 
 // ========= Route Callbacks =========
-function getIndex(req, res){
+function getIndex(req, res) {
   console.log('Yes, we are here');
   res.render('pages/index.ejs');
 };
 
 
-function makeSearch (req, res) {
+function makeSearch(req, res) {
   // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
   // superagent.get(url)
   //   .then(results => {
@@ -52,7 +52,7 @@ function saveResult(req, res) {
 }
 
 function getAboutUs(req, res) {
-
+  res.render('pages/about-us.ejs');
 
 }
 
