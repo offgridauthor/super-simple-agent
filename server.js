@@ -5,6 +5,7 @@ const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
 const prettyPrintJson = require('pretty-print-json');
+const beautify = require('beautify');
 require('dotenv').config();
 
 // ========= Setup Application Server =========
@@ -28,23 +29,23 @@ app.get('/collection', getSavedSearches);
 app.get('/recommendation', getRecApis);
 
 // ========= Route Callbacks =========
-function getIndex(req, res){
+function getIndex(req, res) {
   console.log('Yes, we are here');
   res.render('pages/index.ejs');
 };
 
 
-function makeSearch (req, res) {
-  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
-  // superagent.get(url)
-  //   .then(results => {
-  //     console.log(results.body);
-  //     // res.send(JSON.stringify(results.body, null, 2));
-  //     res.render('pages/search-results.ejs', { results: results.body });
-  //     // res.send(results.body);
-  //   })
-
-}
+function makeSearch(req, res) {
+  // const url = req.body.search[0];
+  const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  superagent.get(url)
+    .then(results => {
+      const data = results.body;
+      const html = prettyPrintJson.prettyPrintJson.toHtml(data);
+      res.render('pages/search-results.ejs', { html: html });
+    })
+    .catch(error => console.log(error));
+};
 
 function saveResult(req, res) {
 
