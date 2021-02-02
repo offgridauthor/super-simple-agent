@@ -11,7 +11,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
-client.on('error', (error) => console.log(error));
+// client.on('error', (error) => console.log(error));
 
 // ========= Global Variables =========
 const DATABASE_URL = process.env.DATABASE_URL;
