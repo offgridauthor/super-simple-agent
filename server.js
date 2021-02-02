@@ -1,9 +1,10 @@
 'use strict';
 
-//======== Create server =======//
+// ========= Create server =========
 const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
+const prettyPrintJson = require('pretty-print-json');
 require('dotenv').config();
 
 // ========= Setup Application Server =========
@@ -29,11 +30,19 @@ app.get('/recommendation', getRecApis);
 // ========= Route Callbacks =========
 function getIndex(req, res){
   console.log('Yes, we are here');
-  res.send('Hello World!');
+  res.render('pages/index.ejs');
 };
 
-function makeSearch(req, res) {
 
+function makeSearch (req, res) {
+  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  // superagent.get(url)
+  //   .then(results => {
+  //     console.log(results.body);
+  //     // res.send(JSON.stringify(results.body, null, 2));
+  //     res.render('pages/search-results.ejs', { results: results.body });
+  //     // res.send(results.body);
+  //   })
 
 }
 

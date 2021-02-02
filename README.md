@@ -14,8 +14,10 @@ This is our code 301 Final Project while at Code Fellows. This is an app that he
 
 ## Change Log
 
-**Timestamp  - Description**
-1612219947   - Initial set-up of database (table, schema, seed) and server
+**Timestamp - Description**
+1612219947 - Initial set-up of database (table, schema, seed) and server
+
+1612232048 - Confirmed Server working with Heroku deployment.
 
 ## Credits and Collaborations
 
