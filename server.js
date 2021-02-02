@@ -33,6 +33,7 @@ function getIndex(req, res){
   res.render('pages/index.ejs');
 };
 
+
 function makeSearch (req, res) {
   // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
   // superagent.get(url)
@@ -45,29 +46,42 @@ function makeSearch (req, res) {
 
 }
 
-function saveResult (req, res) {
+function saveResult(req, res) {
 
 
 }
 
-function getAboutUs (req, res) {
+function getAboutUs(req, res) {
 
 
 }
 
-function getSavedSearches (req, res) {
+function getSavedSearches(req, res) {
 
 
 }
 
-function getRecApis (req, res) {
+function getRecApis(req, res) {
+  const category = req.body.category;
+  const url = `https://api.publicapis.org/entries?category=${category}`;
 
+  superagent.get(url).then(obj => {
+    const recs = obj.body.entries.map(item => new RecommendedApi(item));
+    res.render('/partials/recommendations.ejs', { recs: recs });
+  });
 
 }
 
 
 // ========= Helper Functions =========
 
+// Shay's Helpers
+function RecommendedApi(obj) {
+  this.name = obj.api;
+  this.description = obj.description;
+  this.url = obj.link;
+  this.cors = obj.cors;
+}
 
 // ========= Start Server =========
 client.connect().then(() => {
