@@ -13,7 +13,7 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 const DATABASE_URL = process.env.DATABASE_URL;
 const client = new pg.Client(DATABASE_URL);
-client.on('error', (error) => console.log(error));
+// client.on('error', (error) => console.log(error));
 
 //======= Global Variables =======//
 const PORT = process.env.PORT || 3111;
@@ -28,39 +28,56 @@ app.get('/recommendation', getRecApis);
 
 
 //======= Route Callbacks =====//
-function getIndex(req, res){
+function getIndex(req, res) {
   console.log('Yes, we are here');
 
 }
 
-function makeSearch (req, res) {
+function makeSearch(req, res) {
 
 
 }
 
-function saveResult (req, res) {
+function saveResult(req, res) {
 
 
 }
 
-function getAboutUs (req, res) {
+function getAboutUs(req, res) {
 
 
 }
 
-function getSavedSearches (req, res) {
+function getSavedSearches(req, res) {
 
 
 }
 
-function getRecApis (req, res) {
+function getRecApis(req, res) {
+  const category = req.body.category;
+  const url = `https://api.publicapis.org/entries?category=${category}`;
 
+  superagent.get(url).then(obj => {
+    const recs = obj.body.entries.map(item => new RecommendedApi(item));
+    res.render('/partials/recommendations.ejs', { recs: recs });
+  });
 
 }
 
 
 //======= Helper Functions =====//
 
+
+
+
+
+// Shay's Helpers
+function RecommendedApi(obj) {
+  this.name = obj.api;
+  this.description = obj.description;
+  this.url = obj.link;
+  this.cors = obj.cors;
+}
 
 //======= Start Server =====//
 client.connect().then(() => {
