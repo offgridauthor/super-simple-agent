@@ -1,0 +1,33 @@
+ul{
+  display:grid;
+  grid-template-columns: 480px;
+  /* using fractions for dynamic display could use 250px instead for mobile display*/
+  grid-template-rows: 480px 480px 480px 480px 480px 480px 480px 480px;
+  height: 80vh;
+  justify-items: center;
+  align-items: center;
+}
+
+li{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+}
+
+/* 
+@media min-width
+
+ul{
+  display:grid;
+  grid-template-columns: 480px 480px;
+  /* using fractions for dynamic display could use 250px instead for mobile display*/
+  /* grid-template-rows: 480px 480px;
+  height: 80vh;
+}
+
+li{
+  display: flex;
+  justify-content: center;
+
+} */ 
