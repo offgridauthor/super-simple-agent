@@ -2,19 +2,48 @@ ul{
   display:grid;
   grid-template-columns: 480px;
   /* using fractions for dynamic display could use 250px instead for mobile display*/
-  grid-template-rows: 480px 480px 480px 480px 480px 480px 480px 480px;
-  height: 80vh;
+  grid-template-rows: 50px 500px 300px 50px 500px 300px 50px 500px 300px;
+
+  
   justify-items: center;
   align-items: center;
 }
-
-li{
-  display: flex;
-  justify-content: center;
-  height: 400px;
-  width: 400px;
+h2{
+  justify-items: center;
+  text-align: center;
+  font-size: 18px;
 }
+li{
+  
+  /* height: 400px; */
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+img {
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+}
+p{
+  text-align: justify;
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.hero{
+  /* width: 400px; */
+  max-width: 480px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
+  border-radius: 20px;
 
+}  
+  
+  /* display: flex;
+  justify-items: center;
+  align-items: center; */
+}
 /* 
 @media min-width
 
