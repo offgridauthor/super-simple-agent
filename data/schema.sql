@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS apis;
+
+CREATE TABLE apis(
+  id SERIAL PRIMARY KEY,
+  url VARCHAR(255),
+  time_stamp TIMESTAMP,
+  code_name VARCHAR(255)
+
+);
