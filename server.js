@@ -34,7 +34,7 @@ app.get('/recommendation', getRecApis);
 function getIndex(req, res) {
   console.log('Yes, we are here');
   res.render('pages/index.ejs');
-};
+}
 
 
 function makeSearch(req, res) {
@@ -70,7 +70,7 @@ function getAboutUs(req, res) {
 }
 
 function getSavedSearches(req, res) {
-
+  res.render('pages/collection.ejs');
 
 }
 

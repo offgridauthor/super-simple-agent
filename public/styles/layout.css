@@ -1,0 +1,66 @@
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*mobile*/
+
+@media (min-width: 480px) {
+  main {
+    width: 480px;
+    margin: auto;
+  }
+  section {
+    text-align: left;
+  }
+  section:nth-of-type(1){
+    width: 20px;
+    height: 20px;
+  }
+  section:nth-of-type(2){
+  width: 480px;
+  height: 150px;
+  }
+  section:nth-of-type(3){
+  width: 480px;
+  height: 125px;
+  }
+
+  section:nth-of-type(4){
+    width: 50%;
+    height: 250px;
+  }
