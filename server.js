@@ -6,7 +6,6 @@ const superagent = require('superagent');
 const pg = require('pg');
 const prettyPrintJson = require('pretty-print-json');
 const fecha = require('fecha');
-const { response } = require('express');
 require('dotenv').config();
 
 // ========= Setup Application Server =========
@@ -45,7 +44,7 @@ function makeSearch(req, res) {
       res.render('pages/search-results.ejs', { html: html, url: url });
     })
     .catch(error => {
-      response.status(500).send('Error, search could not be completed');
+      res.status(500).send('Error, search could not be completed');
       console.log(error);
     });
 };
@@ -59,10 +58,10 @@ function saveResult(req, res) {
   const sqlArray = [url, timestamp, codename];
   client.query(sqlQuery, sqlArray)
     .then(result => {
-      res.redirect('/collection')
+      res.redirect('/collection');
     })
     .catch(error => {
-      response.status(500).send('API not saved');
+      res.status(500).send('API not saved');
       console.log(error);
     });
 };
@@ -81,7 +80,7 @@ function getSavedSearches(req, res) {
       res.render('pages/collection.ejs', { apis: result.rows })
     })
     .catch(error => {
-      response.status(500).send('Error, apis not found');
+      res.status(500).send('Error, apis not found');
       console.log(error);
     });
 };
