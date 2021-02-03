@@ -75,21 +75,16 @@ function getSavedSearches(req, res) {
 }
 
 function getRecApis(req, res) {
-  // const category = req.body.category;
-  // const category = 'news';
-  // const url = `https://api.publicapis.org/entries?category=${category}`;
-
-  // superagent.get(url).then(obj => {
-  //   const recs = obj.body.entries.map(item => new RecommendedApi(item));
-  //   console.log('****** recs ******', recs);
-  //   console.log('###### req.body #####', req.body);
-
-  //   res.render('pages/recommendations.ejs', { recs: recs });
-  // })
-  //   .catch(error => {
-  //     res.status(500).send('Something went wrong with Big PAPA');
-  //     console.log(error.message);
-  //   });
+  const category = req.query.category[0];
+  const url = `https://api.publicapis.org/entries?category=${category}`;
+  superagent.get(url).then(obj => {
+    const recs = obj.body.entries.map(item => new RecommendedApi(item));
+    res.render('pages/recommendations.ejs', { recs: recs });
+  })
+    .catch(error => {
+      res.status(500).send('Something went wrong with Big PAPA');
+      console.log(error.message);
+    });
 
 }
 
@@ -99,10 +94,10 @@ function getRecApis(req, res) {
 // Shay's Helpers
 function RecommendedApi(obj) {
   // console.log('&&&&&& Api obj &&&&&', obj);
-  this.name = obj.api;
-  this.description = obj.description;
-  this.url = obj.link;
-  this.cors = obj.cors;
+  this.name = obj.API;
+  this.description = obj.Description;
+  this.url = obj.Link;
+  this.cors = obj.Cors;
 }
 
 // ========= Start Server =========

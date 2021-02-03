@@ -17,10 +17,21 @@
     <h3>Here are your recommendations based on the category you selected</h3>
     <div>
       <% for(let i=0; i < recs.length; i++) { %>
-        <p>
-          Dummy URL <%= [i] %>
-          <!-- <%=recs[i] %> -->
-        </p>
+      <ul>
+        <li>
+          <%= recs[i].name %>
+        </li>
+        <li>
+          <%= recs[i].description %>
+        </li>
+        <li>
+          <%= recs[i].url %>
+        </li>
+        <li>
+          <%= recs[i].cors %>
+        </li>
+
+      </ul>
       <% } %>
     </div>
 
