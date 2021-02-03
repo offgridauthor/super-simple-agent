@@ -21,6 +21,11 @@
     <article>
       <%- html %>
     </article>
+    <form class="save-api" action="/save" method="POST">
+      <input type="hidden" name="url" value="<%=url%>">
+      <input type="text" name="codename" placeholder="input codename here">
+      <input class="save-" type="submit" value="save api">
+    </form>
   </main>
   <footer>
 
