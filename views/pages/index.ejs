@@ -24,7 +24,7 @@
   <main>
     <form action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
-      <input type="submit" name="search" value="search">
+      <input type="submit" name="search" name="category" value="search">
     </form>
     <article>
 
@@ -33,62 +33,58 @@
 
 
 
-
-
     <br>
     <br>
     <form action="/recommendations" method="GET">
-      <input type="text" name="category" placeholder="Type in a category">
-      <input class="category-button" type="submit" name="category" value="Category Recommendation">
-      <select>
+      <select name="category">
         <option value="default">Choose an API category</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-
+        <option value="Animals">Animals</option>
+        <option ue="Anime">Anime</option>
+        <option value="Anti-Malware">Anti-Malware</option>
+        <option value="Art & Design">Art & Design</option>
+        <option value="Books">Books</option>
+        <option value="Business">Business</option>
+        <option value="Calendar">Calendar</option>
+        <option value="Cloud Storage & File Sharing">Cloud Storage & File Sharing</option>
+        <option value="Continuous Integration">Continuous Integration</option>
+        <option value="Cryptocurrency">Cryptocurrency</option>
+        <option value="Currency Exchange">Currency Exchange</option>
+        <option value="Data Validation">Data Validation</option>
+        <option value="Development">Development</option>
+        <option value="Dictionaries">Dictionaries</option>
+        <option value="Documents & Productivity">Documents & Productivity</option>
+        <option value="Environment">Environment</option>
+        <option value="Events">Events</option>
+        <option value="Finance">Finance</option>
+        <option value="Food & Drink">Food & Drink</option>
+        <option value="Games & Comics">Games & Comics</option>
+        <option value="Geocoding">Geocoding</option>
+        <option value="Government">Government</option>
+        <option value="Health">Health</option>
+        <option value="Jobs">Jobs</option>
+        <option value="Machine Learning">Machine Learning</option>
+        <option value="Music">Music</option>
+        <option value="News ">News</option>
+        <option value="Open Data">Open Data</option>
+        <option value="Open Source Projects">Open Source Projects</option>
+        <option value="Patent">Patent</option>
+        <option value="Personality">Personality</option>
+        <option value="Photography">Photography</option>
+        <option value="Science & Math">Science & Math</option>
+        <option value="Security">Security</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Social">Social</option>
+        <option value="Sports & Fitness">Sports & Fitness</option>
+        <option value="Test Data">Test Data</option>
+        <option value="Text Analysis">Text Analysis</option>
+        <option value="Tracking">Tracking</option>
+        <option value="Transportation">Transportation</option>
+        <option value="URL Shorteners">URL Shorteners</option>
+        <option value="Vehicle">Vehicle</option>
+        <option value="Video">Video</option>
+        <option value="Weather">Weather</option>
       </select>
+      <input class="category-button" type="submit" value="get recommendations">
     </form>
     <br>
     <h3>Example Categories: News, Music, Animals, Books, Business, Cryptocurrency, etc.</h3>
