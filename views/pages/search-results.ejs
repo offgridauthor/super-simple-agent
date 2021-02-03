@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@0.4/dist/pretty-print-json.css">
   <title>SuperSimpleAgent</title>
 </head>
+
 <body>
   <main>
-    
+    <form action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input type="submit" name="search" value="search">
+    </form>
+    <article>
+      <%- html %>
+    </article>
+    <form class="save-api" action="/save" method="POST">
+      <input type="hidden" name="url" value="<%=url%>">
+      <input type="text" name="codename" placeholder="input codename here">
+      <input class="save-" type="submit" value="save api">
+    </form>
   </main>
   <footer>
 
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/pretty-print-json@0.4/dist/pretty-print-json.min.js"></script>
 </body>
+
 </html>

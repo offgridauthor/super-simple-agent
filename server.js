@@ -5,6 +5,9 @@ const express = require('express');
 const superagent = require('superagent');
 const pg = require('pg');
 const prettyPrintJson = require('pretty-print-json');
+const fecha = require('fecha');
+// const format = fecha.format;
+// const beautify = require('beautify');
 require('dotenv').config();
 
 // ========= Setup Application Server =========
@@ -35,21 +38,31 @@ function getIndex(req, res) {
 
 
 function makeSearch(req, res) {
-  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
-  // superagent.get(url)
-  //   .then(results => {
-  //     console.log(results.body);
-  //     // res.send(JSON.stringify(results.body, null, 2));
-  //     res.render('pages/search-results.ejs', { results: results.body });
-  //     // res.send(results.body);
-  //   })
-
-}
+  // const url = req.body.search[0];
+  const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  superagent.get(url)
+    .then(results => {
+      const data = results.body;
+      const html = prettyPrintJson.prettyPrintJson.toHtml(data);
+      res.render('pages/search-results.ejs', { html: html, url: url });
+    })
+    .catch(error => console.log(error));
+};
 
 function saveResult(req, res) {
-
-
-}
+  // 2021-02-01 20:10:05
+  const url = req.body.url;
+  const codename = req.body.codename;
+  const timestamp = fecha.format(new Date(), 'YYYY-MM-DD HH:mm:ss')
+  const sqlQuery = 'INSERT INTO apis (url, time_stamp, code_name) VALUES ($1, $2, $3);';
+  const sqlArray = [url, timestamp, codename];
+  client.query(sqlQuery, sqlArray)
+    .then(result => {
+      console.log(result);
+      res.redirect('/collection')
+    })
+    .catch(error => console.log(error));
+};
 
 function getAboutUs(req, res) {
   res.render('pages/about-us.ejs');
