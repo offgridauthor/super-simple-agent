@@ -76,7 +76,7 @@ function getAboutUs(req, res) {
 function getSavedSearches(req, res) {
   const sqlQuery = 'SELECT * FROM apis;';
   client.query(sqlQuery)
-  .then(result => {
+    .then(result => {
       res.render('pages/collection.ejs', { apis: result.rows })
     })
     .catch(error => {
@@ -87,17 +87,20 @@ function getSavedSearches(req, res) {
 
 
 function getRecApis(req, res) {
-  const category = req.query.category[0];
-  const url = `https://api.publicapis.org/entries?category=${category}`;
-
-  superagent.get(url).then(obj => {
-    const recs = obj.body.entries.map(item => new RecommendedApi(item));
-    res.render('pages/recommendations.ejs', { recs: recs });
-  })
-    .catch(error => {
-      res.status(500).send('Something went wrong with Big PAPA');
-      console.log(error.message);
-    });
+  if (req.query.category !== 'default') {  //see comment below on res.redirect within this function on why this if statement was created
+    const category = req.query.category;
+    const url = `https://api.publicapis.org/entries?category=${category}`;
+    superagent.get(url).then(obj => {
+      const recs = obj.body.entries.map(item => new RecommendedApi(item));
+      res.render('pages/recommendations.ejs', { recs: recs, category: category });
+    })
+      .catch(error => {
+        res.status(500).send('Something went wrong with Big PAPA');
+        console.log(error.message);
+      });
+  } else{
+    res.redirect('/'); //if user clicks on get recommendations button without making a selection from the dropdow (e.g. default value), then it will redirect them to index -- essentially this keeps them on the index page -- it's handling an edge case
+  }
 };
 
 

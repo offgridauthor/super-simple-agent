@@ -22,21 +22,21 @@
     </nav>
   </header>
   <main>
-    <h3>Here are your recommendations based on the category you selected</h3>
+    <h3>Here are your recommendations based on the <span id="category"><%= category %></span> category you selected</h3>
     <div>
       <% for(let i=0; i < recs.length; i++) { %>
       <ul>
         <li>
-          <%= recs[i].name %>
+          <span id="api-name">API Name: </span><%= recs[i].name %>
         </li>
         <li>
-          <%= recs[i].description %>
+          <span id="api-description">Description: </span><%= recs[i].description %>
         </li>
         <li>
-          <%= recs[i].url %>
+          <span id="api-url">URL: </span><a href="<%= recs[i].url %>"> <%= recs[i].url %> </a>
         </li>
         <li>
-          <%= recs[i].cors %>
+          <span id="api-cors">Cors: </span><%= recs[i].cors %>
         </li>
 
       </ul>
