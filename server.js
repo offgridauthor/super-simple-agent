@@ -28,7 +28,7 @@ app.post('/search', makeSearch);
 app.post('/save', saveResult);
 app.get('/about-us', getAboutUs);
 app.get('/collection', getSavedSearches);
-app.get('/recommendation', getRecApis);
+app.get('/recommendations', getRecApis);
 
 // ========= Route Callbacks =========
 function getIndex(req, res) {
@@ -75,13 +75,21 @@ function getSavedSearches(req, res) {
 }
 
 function getRecApis(req, res) {
-  const category = req.body.category;
-  const url = `https://api.publicapis.org/entries?category=${category}`;
+  // const category = req.body.category;
+  // const category = 'news';
+  // const url = `https://api.publicapis.org/entries?category=${category}`;
 
-  superagent.get(url).then(obj => {
-    const recs = obj.body.entries.map(item => new RecommendedApi(item));
-    res.render('/partials/recommendations.ejs', { recs: recs });
-  });
+  // superagent.get(url).then(obj => {
+  //   const recs = obj.body.entries.map(item => new RecommendedApi(item));
+  //   console.log('****** recs ******', recs);
+  //   console.log('###### req.body #####', req.body);
+
+  //   res.render('pages/recommendations.ejs', { recs: recs });
+  // })
+  //   .catch(error => {
+  //     res.status(500).send('Something went wrong with Big PAPA');
+  //     console.log(error.message);
+  //   });
 
 }
 
@@ -90,6 +98,7 @@ function getRecApis(req, res) {
 
 // Shay's Helpers
 function RecommendedApi(obj) {
+  // console.log('&&&&&& Api obj &&&&&', obj);
   this.name = obj.api;
   this.description = obj.description;
   this.url = obj.link;
