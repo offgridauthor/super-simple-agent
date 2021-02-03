@@ -65,7 +65,7 @@ function saveResult(req, res) {
 };
 
 function getAboutUs(req, res) {
-
+  res.render('pages/about-us.ejs');
 
 }
 
