@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,24 +12,37 @@
   <!-- Load icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  <p>Collection of searches</p></br>
-  <section>
-    <form class="search" action="POST">
-        <label for="search"></label><br>
-        <input type="text" id="API" placeholder="input your API URL"><br>
-        <input type="submit" value="Search">
-      </ br>
-      <label for="recommendation1"></label><br>
-      <input type="text" id="recom1" placeholder="Recommendation 1"><br>
-      <label for="recommendation1"></label><br>
-      <input type="text" id="recom1" placeholder="Recommendation 2"><br>
-      <label for="recommendation1"></label><br>
-      <input type="text" id="recom1" placeholder="Recommendation 3"><br>
-      <label for="recommendation1"></label><br>
-      <input type="text" id="recom1" placeholder="Recommendation 4"><br>
+  <header>
+    <h1>SuperSimpleAgent</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/collection">Collection</a>
+      <a href="/about-us">About Us</a>
+    </nav>
+  </header>
+  <main>
+    <h3>Collection of API Searches</h3>
+    <form action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input type="submit" name="search" value="search">
     </form>
-  </section>
+    <section>
+      <% for (let i=0; i < apis.length; i++){ %>
+
+        <ul>
+          <li><%= apis[i].time_stamp %></li>
+          <li><%= apis[i].code_name %></li>
+          <li><%= apis[i].url %></li>
+        </ul>
   
+        <% } %>
+    </section>
+    <footer>
+
+    </footer>
+  </main>
 </body>
+
 </html>
