@@ -56,11 +56,11 @@ p{
   /* body{
     width:1080px;
   } */
-  header{
+  /* header{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 main{
   margin: auto;
     display: flex;
