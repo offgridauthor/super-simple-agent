@@ -1,10 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-/**********************************/
-/******* Error Message Page *******/
-/**********************************/
-
 header {
   font-family: 'Sriracha', cursive;
   font-size: 40px;
@@ -14,6 +10,8 @@ header {
 
 h2 {
   margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .ul {
@@ -51,6 +49,11 @@ footer {
 button {
   margin-top: 5px;
 }
+.link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (min-width: 768px){
 
@@ -67,4 +70,5 @@ footer {
   width: 960px;
   margin: auto;
 }
+
 }
