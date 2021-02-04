@@ -26,10 +26,17 @@ This is a mobile first app. The client is build using [EJS](https://ejs.co/) and
 
 1612232048 - Confirmed Server working with Heroku deployment.
 
+000000000 - Category search recommendations functional
+
+000000000 - API search functionality works
+
+1612393371812 -  Pretify JSON and `<pre>` tag implemented to display JSON in user friendly manner
+
 1612393371812 - About Me mobile and desktop view styled and contented
 
 1612416220 - Overall site layout (e.g. base.css and layout.css) are complete. Recommendation feature is complete. Dynamic search and search error handling features are complete. JSON prettification is near-complete.
 
+1612461409989 - mobile styling entirely complete
 
 ## Credits and Collaborations
 
