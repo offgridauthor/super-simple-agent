@@ -44,7 +44,8 @@ function makeSearch(req, res) {
       res.render('pages/search-results.ejs', { html: html, url: url });
     })
     .catch(error => {
-      res.status(500).send('Error, search could not be completed');
+      // res.status(500).send('Error, search could not be completed');  //original code
+      res.status(500).render('pages/error.ejs');
       console.log(error);
     });
 };
