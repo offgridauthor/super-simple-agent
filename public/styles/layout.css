@@ -2,7 +2,6 @@ body {
   font-family: Arial;
 }
 
-
 header {
   margin-top: 5px;
   height: 75px;
@@ -22,6 +21,10 @@ h1 {
   background-color: #1E2436;
 }
 
+h3 {
+  margin-bottom: 10px;
+}
+
 nav {
   grid-column: 2;
   grid-row: 2;
@@ -30,29 +33,38 @@ nav {
   grid-template-rows: 100%;
 }
 
-nav a{
+nav a {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   text-decoration: none;
 }
-.index{
+
+.index {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 200px 75px 150px 325px;
+  grid-template-rows: 200px 200px 150px 325px;
   margin-top: 20px;
 }
 
-form{
-  
-  display: grid; 
-  /* align-items: center;
-  justify-content: center; */
+.index article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 50% 10% 25%;
   justify-items: center;
-
 }
 
 input {
@@ -61,49 +73,57 @@ input {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* display: block; */
   border-radius: 10px;
   font-size: 16px;
-
 }
-select{
+
+select {
   border-radius: 10px;
   width: 400px;
   text-align: center;
-
 }
-#search-button{
+
+.search-button {
   width: 200px;
   grid-row: 3;
   border-radius: 20px;
 }
-article{
+
+article {
   text-align: justify;
   margin-left:10px;
-  margin-right:10px;
-  
+  margin-right:10px;  
 }
 
-#reccs{
+.search {
+  height: 200px;
+}
+
+main section {
+  margin-top: 20px;
+}
+
+.reccs {
   width:200px;
   grid-row: 3;
   border-radius: 20px;
 }
-a{
+
+a {
   margin-top:10px;
 text-align: center;
 }
-  /* input, textarea, select, button {
-    width : 150px;
-    height
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  } */
 
-footer{
+footer {
   margin: 10px;
+  padding: 20px;
 }
+
+footer section {
+  text-align: justify;
+  color: rgba(160, 167, 199, .6);
+}
+
 /* for desktop view */
 @media (min-width: 768px){
 
@@ -111,13 +131,13 @@ footer{
     margin: auto;
     /* align: center; */
   }
+
   li {
     width: 100%;           
     position: relative;
     list-style-type: none;
     margin: 5px;
     padding: 0;
-
 }
 
 li:before, ul:after {
@@ -133,3 +153,4 @@ li:before {
     border-right: 0;    
 }
 
+}

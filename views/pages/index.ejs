@@ -22,9 +22,9 @@
     </nav>
   </header>
   <main class="index">
-    <form class="search" action="/search" method="POST">
+    <form action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
-      <input type="submit" id="search-button" name="search" name="category" value="search">
+      <input type="submit" class="search-button" name="search" name="category" value="search">
     </form>
     <article>
       This app is designed to help software devs parse info from JSON returned from API requests by presenting it in a
@@ -80,7 +80,7 @@
         <option value="Video">Video</option>
         <option value="Weather">Weather</option>
       </select>
-      <input class="category-button" id="reccs" type="submit" value="get recommendations">
+      <input class="reccs" type="submit" value="get recommendations">
     </form>
     <a href=https://github.com/public-apis/public-apis#open-data>This app utilizes the Public API's Project API </a>
   </main>

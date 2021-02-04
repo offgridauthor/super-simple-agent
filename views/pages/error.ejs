@@ -17,8 +17,8 @@
   <header>
     <h1> Oops, something went wrong...</h1>
   </header>
-  <main>
-    <ul>
+  <main id="error-main">
+    <ul class="ul">
       <h2> Perhaps you can try: </h2>
       <li>
         1: Checking that you have a valid URL; please ensure that your URL does <span class="emphasize">not</span> include API keys.
@@ -29,7 +29,7 @@
       </li>
       <li>
         <form class="search" action="/search" method="POST">
-          <input type="text" name="search" placeholder="Insert API search URL here">>
+          <input id="error" type="text" name="search" placeholder="Insert API search URL here">>
           <input type="submit" id="search-button" name="search" name="category" value="search">
         </form>
       </li>

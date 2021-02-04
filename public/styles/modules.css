@@ -5,18 +5,18 @@
 /******* Error Message Page *******/
 /**********************************/
 
-header{
+header {
   font-family: 'Sriracha', cursive;
   font-size: 40px;
   margin-bottom: 20px;
   margin-left: 10px;
 }
 
-h2{
+h2 {
   margin-left: 10px;
 }
 
-ul{
+.ul {
   text-align: justify;
   margin-left: 20px;
   margin-right: 20px;
@@ -24,14 +24,13 @@ ul{
   box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
   border-radius: 20px;
   margin-bottom: 30px;
-
 }
 
-li{
+li {
   padding: 10px;
 }
 
-input[type=text]{
+#error {
   width: 300px;
 
 }
@@ -49,6 +48,23 @@ footer {
   margin: 30px 0px;
 }
 
-button{
+button {
   margin-top: 5px;
+}
+
+@media (min-width: 768px){
+
+#error-main {
+  width: 960px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+footer {
+  width: 960px;
+  margin: auto;
+}
 }
