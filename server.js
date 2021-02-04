@@ -35,8 +35,9 @@ function getIndex(req, res) {
 
 
 function makeSearch(req, res) {
-  // const url = req.body.search[0];
-  const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  const url = req.body.search[0];
+  console.log(req.body);
+  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
   superagent.get(url)
     .then(results => {
       const data = results.body;
@@ -44,7 +45,8 @@ function makeSearch(req, res) {
       res.render('pages/search-results.ejs', { html: html, url: url });
     })
     .catch(error => {
-      res.status(500).send('Error, search could not be completed');
+      // res.status(500).send('Error, search could not be completed');  //original code
+      res.status(500).render('pages/error.ejs');
       console.log(error);
     });
 };

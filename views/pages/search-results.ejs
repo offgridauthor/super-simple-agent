@@ -27,7 +27,9 @@
       <input type="submit" name="search" value="search">
     </form>
     <article>
-      <%- html %>
+      <pre>
+        <%- html %>
+      </pre>
     </article>
     <form class="save-api" action="/save" method="POST">
       <input type="hidden" name="url" value="<%=url%>">
