@@ -24,17 +24,17 @@
   <main>
     <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
-      <input type="submit" name="search" value="search">
+      <input class="search-button" type="submit" name="search" value="search">
     </form>
     <article>
       <pre>
         <%- html %>
       </pre>
     </article>
-    <form class="save-api" action="/save" method="POST">
+    <form class="search" action="/save" method="POST">
       <input type="hidden" name="url" value="<%=url%>">
       <input type="text" name="codename" placeholder="input codename here">
-      <input class="save-" type="submit" value="save api">
+      <input class="reccs" type="submit" value="save api">
     </form>
 
   </main>

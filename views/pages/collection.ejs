@@ -22,16 +22,16 @@
       <a href="/about-us">About Us</a>
     </nav>
   </header>
-  <main id=main>
+  <main>
     <h3>Collection of API Searches</h3>
     <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
-      <input type="submit" name="search" value="search">
+      <input class="search-button" type="submit" name="search" value="search">
     </form>
     <section>
       <% for (let i=0; i < apis.length; i++){ %>
 
-        <ul>
+        <ul class="ul">
           <li>
             <%= apis[i].time_stamp %>
           </li>
