@@ -22,21 +22,23 @@
     </nav>
   </header>
   <main>
-    <form class="search" action="/search" method="POST">
-      <input type="text" name="search" placeholder="Insert API search URL here">
-      <input class="search-button" type="submit" name="search" value="search">
-    </form>
-    <article>
-      <pre>
-        <%- html %>
-      </pre>
-    </article>
     <form class="search" action="/save" method="POST">
       <input type="hidden" name="url" value="<%=url%>">
       <input type="text" name="codename" placeholder="input codename here">
       <input class="reccs" type="submit" value="save api">
     </form>
+    <div>
+      <article>
+        <pre>
+        <%- html %>
+      </pre>
+      </article>
+    </div>
 
+    <form class="search" action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input class="search-button" type="submit" name="search" value="search">
+    </form>
   </main>
   <footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
