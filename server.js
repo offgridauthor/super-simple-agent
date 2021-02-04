@@ -35,8 +35,8 @@ function getIndex(req, res) {
 
 
 function makeSearch(req, res) {
-  // const url = req.body.search[0];
-  const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  const url = req.body.search[0];
+  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
   superagent.get(url)
     .then(results => {
       const data = results.body;
@@ -98,7 +98,7 @@ function getRecApis(req, res) {
         res.status(500).send('Something went wrong with Big PAPA');
         console.log(error.message);
       });
-  } else{
+  } else {
     res.redirect('/'); //if user clicks on get recommendations button without making a selection from the dropdow (e.g. default value), then it will redirect them to index -- essentially this keeps them on the index page -- it's handling an edge case
   }
 };

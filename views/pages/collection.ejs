@@ -24,7 +24,7 @@
   </header>
   <main id=main>
     <h3>Collection of API Searches</h3>
-    <form action="/search" method="POST">
+    <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
       <input type="submit" name="search" value="search">
     </form>
@@ -32,11 +32,17 @@
       <% for (let i=0; i < apis.length; i++){ %>
 
         <ul>
-          <li><%= apis[i].time_stamp %></li>
-          <li><%= apis[i].code_name %></li>
-          <li><%= apis[i].url %></li>
+          <li>
+            <%= apis[i].time_stamp %>
+          </li>
+          <li>
+            <%= apis[i].code_name %>
+          </li>
+          <li>
+            <%= apis[i].url %>
+          </li>
         </ul>
-  
+
         <% } %>
     </section>
     <footer>
