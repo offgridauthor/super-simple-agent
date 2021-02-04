@@ -37,14 +37,79 @@ nav a{
   font-size: 1rem;
   text-decoration: none;
 }
+.index{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 200px 75px 150px 325px;
+  margin-top: 20px;
+}
 
+form{
+  
+  display: grid; 
+  /* align-items: center;
+  justify-content: center; */
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 10% 25%;
+  justify-items: center;
 
+}
+
+input {
+  width: 400px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* display: block; */
+  border-radius: 10px;
+  font-size: 16px;
+
+}
+select{
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+
+}
+#search-button{
+  width: 200px;
+  grid-row: 3;
+  border-radius: 20px;
+}
+article{
+  text-align: justify;
+  margin-left:10px;
+  margin-right:10px;
+  
+}
+
+#reccs{
+  width:200px;
+  grid-row: 3;
+  border-radius: 20px;
+}
+a{
+  margin-top:10px;
+text-align: center;
+}
+  /* input, textarea, select, button {
+    width : 150px;
+    height
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  } */
+
+footer{
+  margin: 10px;
+}
 /* for desktop view */
 @media (min-width: 768px){
 
   main {
     margin: auto;
-    align: center
+    /* align: center; */
   }
   li {
     width: 100%;           
@@ -67,8 +132,4 @@ li:before {
     content: '';
     border-right: 0;    
 }
-
-
-
-  
 

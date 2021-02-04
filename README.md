@@ -19,6 +19,10 @@ This is our code 301 Final Project while at Code Fellows. This is an app that he
 
 1612232048 - Confirmed Server working with Heroku deployment.
 
+1612393371812 - About Me mobile and desktop view styled and contented
+
+
+
 ## Credits and Collaborations
 
 Nich Carignan

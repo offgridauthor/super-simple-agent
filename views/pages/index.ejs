@@ -21,20 +21,16 @@
 
     </nav>
   </header>
-  <main>
-    <form action="/search" method="POST">
+  <main class="index">
+    <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
-      <input type="submit" name="search" name="category" value="search">
+      <input type="submit" id="search-button" name="search" name="category" value="search">
     </form>
     <article>
-
+      This app is designed to help software devs parse info from JSON returned from API requests by presenting it in a
+      visually appealing manner. Make sure you're inputing a full search, not just the API url.
     </article>
 
-
-
-
-    <br>
-    <br>
     <form action="/recommendations" method="GET">
       <select name="category">
         <option value="default">Choose an API category</option>
@@ -84,46 +80,14 @@
         <option value="Video">Video</option>
         <option value="Weather">Weather</option>
       </select>
-      <input class="category-button" type="submit" value="get recommendations">
+      <input class="category-button" id="reccs" type="submit" value="get recommendations">
     </form>
-    <br>
-    <h3>Example Categories: News, Music, Animals, Books, Business, Cryptocurrency, etc.</h3>
-    <br>
-    <a href=https://github.com/public-apis/public-apis#open-data>Big PAPA direct link</a>
-
+    <a href=https://github.com/public-apis/public-apis#open-data>This app utilizes the Public API's Project API </a>
   </main>
   <footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    This app uses standard GET and
+    POST methods to retrieve information from API URL's it's provided. Use API URL's that contain API keys at your own
+    risk and DO NOT SAVE THEM to the database.
   </footer>
 
 </body>
