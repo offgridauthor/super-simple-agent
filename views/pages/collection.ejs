@@ -23,23 +23,23 @@
     </nav>
   </header>
   <main>
-    <h3>Collection of API Searches</h3>
-    <form class="search" action="/search" method="POST">
+    <!-- <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
       <input class="search-button" type="submit" name="search" value="search">
-    </form>
+    </form> -->
+    <h2>Collection of API Searches</h2>
     <section>
       <% for (let i=0; i < apis.length; i++){ %>
         <% let x=apis.length - i - 1; %>
           <ul class="ul collect-ul">
             <li>
-              <%= apis[x].time_stamp %>
-            </li>
-            <li>
               <%= apis[x].code_name %>
             </li>
             <li>
               <%= apis[x].url %>
+            </li>
+            <li>
+              <%= apis[x].time_stamp %>
             </li>
             <li>
               <form class="saved-search search" action="/search" method="POST">
