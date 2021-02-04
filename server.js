@@ -35,19 +35,24 @@ function getIndex(req, res) {
 
 
 function makeSearch(req, res) {
-  const url = req.body.search[0];
-  // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
-  superagent.get(url)
-    .then(results => {
-      const data = results.body;
-      const html = prettyPrintJson.prettyPrintJson.toHtml(data);
-      res.render('pages/search-results.ejs', { html: html, url: url });
-    })
-    .catch(error => {
-      // res.status(500).send('Error, search could not be completed');  //original code
-      res.status(500).render('pages/error.ejs');
-      console.log(error);
-    });
+  if(req.body.search[0] !== ''){ //see comment below on res.redirect within this function on why this if statement was created
+    const url = req.body.search[0];
+    console.log(req.body.search);
+    // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+    superagent.get(url)
+      .then(results => {
+        const data = results.body;
+        const html = prettyPrintJson.prettyPrintJson.toHtml(data);
+        res.render('pages/search-results.ejs', { html: html, url: url });
+      })
+      .catch(error => {
+        // res.status(500).send('Error, search could not be completed');  //original code
+        res.status(500).render('pages/error.ejs');
+        console.log(error);
+      });
+  } else {
+    res.redirect('/'); //if user clicks on get recommendations button without making a selection from the dropdow (e.g. default value), then it will redirect them to index -- essentially this keeps them on the index page -- it's handling an edge case
+  }
 };
 
 
