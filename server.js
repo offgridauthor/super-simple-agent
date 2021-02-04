@@ -29,15 +29,13 @@ app.get('/recommendations', getRecApis);
 
 // ========= Route Callbacks =========
 function getIndex(req, res) {
-  console.log('Yes, we are here');
   res.render('pages/index.ejs');
 };
 
 
 function makeSearch(req, res) {
-  if(req.body.search[0] !== ''){ //see comment below on res.redirect within this function on why this if statement was created
+  if (req.body.search[0] !== '') { //see comment below on res.redirect within this function on why this if statement was created
     const url = req.body.search[0];
-    console.log(req.body.search);
     // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
     superagent.get(url)
       .then(results => {
