@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@0.4/dist/pretty-print-json.css">
+  <title>SuperSimpleAgent</title>
+</head>
+
+<body>
+  <header>
+    <h1>SuperSimpleAgent</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/collection">Collection</a>
+      <a href="/about-us">About Us</a>
+    </nav>
+  </header>
+  <main>
+    <form class="search" action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input class="search-button" type="submit" name="search" value="search">
+    </form>
+    <article>
+      <pre>
+        <%- html %>
+      </pre>
+    </article>
+    <form class="search" action="/save" method="POST">
+      <input type="hidden" name="url" value="<%=url%>">
+      <input type="text" name="codename" placeholder="input codename here">
+      <input class="reccs" type="submit" value="save api">
+    </form>
+
+  </main>
+  <footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/pretty-print-json@0.4/dist/pretty-print-json.min.js"></script>
+</body>
+
+</html>

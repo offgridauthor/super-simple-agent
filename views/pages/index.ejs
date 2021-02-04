@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <title>SuperSimpleAgent</title>
+</head>
+
+<body>
+  <header>
+    <h1>SuperSimpleAgent</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/collection">Collection</a>
+      <a href="/about-us">About Us</a>
+
+    </nav>
+  </header>
+  <main class="index">
+    <form action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input type="submit" class="search-button" name="search" name="category" value="search">
+    </form>
+    <article>
+      This app is designed to help software devs parse info from JSON returned from API requests by presenting it in a
+      visually appealing manner. Make sure you're inputing a full search, not just the API url.
+    </article>
+
+    <form action="/recommendations" method="GET">
+      <select name="category">
+        <option value="default">Choose an API category</option>
+        <option value="Animals">Animals</option>
+        <option ue="Anime">Anime</option>
+        <option value="Anti-Malware">Anti-Malware</option>
+        <option value="Art & Design">Art & Design</option>
+        <option value="Books">Books</option>
+        <option value="Business">Business</option>
+        <option value="Calendar">Calendar</option>
+        <option value="Cloud Storage & File Sharing">Cloud Storage & File Sharing</option>
+        <option value="Continuous Integration">Continuous Integration</option>
+        <option value="Cryptocurrency">Cryptocurrency</option>
+        <option value="Currency Exchange">Currency Exchange</option>
+        <option value="Data Validation">Data Validation</option>
+        <option value="Development">Development</option>
+        <option value="Dictionaries">Dictionaries</option>
+        <option value="Documents & Productivity">Documents & Productivity</option>
+        <option value="Environment">Environment</option>
+        <option value="Events">Events</option>
+        <option value="Finance">Finance</option>
+        <option value="Food & Drink">Food & Drink</option>
+        <option value="Games & Comics">Games & Comics</option>
+        <option value="Geocoding">Geocoding</option>
+        <option value="Government">Government</option>
+        <option value="Health">Health</option>
+        <option value="Jobs">Jobs</option>
+        <option value="Machine Learning">Machine Learning</option>
+        <option value="Music">Music</option>
+        <option value="News ">News</option>
+        <option value="Open Data">Open Data</option>
+        <option value="Open Source Projects">Open Source Projects</option>
+        <option value="Patent">Patent</option>
+        <option value="Personality">Personality</option>
+        <option value="Photography">Photography</option>
+        <option value="Science & Math">Science & Math</option>
+        <option value="Security">Security</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Social">Social</option>
+        <option value="Sports & Fitness">Sports & Fitness</option>
+        <option value="Test Data">Test Data</option>
+        <option value="Text Analysis">Text Analysis</option>
+        <option value="Tracking">Tracking</option>
+        <option value="Transportation">Transportation</option>
+        <option value="URL Shorteners">URL Shorteners</option>
+        <option value="Vehicle">Vehicle</option>
+        <option value="Video">Video</option>
+        <option value="Weather">Weather</option>
+      </select>
+      <input class="reccs" type="submit" value="get recommendations">
+    </form>
+    <a href=https://github.com/public-apis/public-apis#open-data>This app utilizes the Public API's Project API </a>
+  </main>
+  <footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="/js/app.js"></script>
+  </footer>
+
+</body>
+
+</html>

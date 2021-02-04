@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection of searches</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>SuperSimpleAgent</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/collection">Collection</a>
+      <a href="/about-us">About Us</a>
+    </nav>
+  </header>
+  <main>
+    <h3>Collection of API Searches</h3>
+    <form class="search" action="/search" method="POST">
+      <input type="text" name="search" placeholder="Insert API search URL here">
+      <input class="search-button" type="submit" name="search" value="search">
+    </form>
+    <section>
+      <% for (let i=0; i < apis.length; i++){ %>
+
+        <ul class="ul">
+          <li>
+            <%= apis[i].time_stamp %>
+          </li>
+          <li>
+            <%= apis[i].code_name %>
+          </li>
+          <li>
+            <%= apis[i].url %>
+          </li>
+        </ul>
+
+        <% } %>
+    </section>
+    <footer>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+      <script src="/js/app.js"></script>
+    </footer>
+  </main>
+</body>
+
+</html>
