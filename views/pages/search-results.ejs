@@ -27,13 +27,13 @@
       <input type="text" name="codename" placeholder="input codename here">
       <input class="reccs" type="submit" value="save api">
     </form>
-    <div>
-      <article>
-        <pre>
+
+    <article id="json-results">
+      <pre>
         <%- html %>
       </pre>
-      </article>
-    </div>
+    </article>
+
 
     <form class="search" action="/search" method="POST">
       <input type="text" name="search" placeholder="Insert API search URL here">
