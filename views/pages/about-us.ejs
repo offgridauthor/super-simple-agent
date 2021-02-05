@@ -1,29 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/layout.css">
-  <link rel="stylesheet" href="/styles/modules.css">
-  <link rel="stylesheet" href="/styles/about-us.css">
-  <title>SuperSimpleAgent</title>
+  <%- include('../layout/head.ejs') %>
 </head>
 
-<body id="about-us">
-  <header>
-    <h1>SuperSimpleAgent</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/collection">Collection</a>
-      <a href="/about-us">About Us</a>
-    </nav>
-  </header>
-  <main>
-    <ul>
-      <h2 id="jasonh2">Jason Quaglia</h2>
+<body>
+  <%- include('../layout/header.ejs') %>
+  <main id="about-us">
+    <ul id="blurbs">
+      <h2 id="jasonh2" class="member-name">Jason Quaglia</h2>
       <img src="img/jason.jpg" id="jason" class="hero" alt="pic of jason quaglia">
       <p id="jasonp" class="intro">Hi, I’m Jason. I’m originally from upstate New York before moving out west to the
         mountains of
@@ -37,13 +22,13 @@
 
       </p>
       <p id="jason-links">
-        <a href="https://www.linkedin.com/in/jason-quaglia/"><img src="img/linkedinicon.png" alt=""></a>
-        <a href="https://github.com/jquaglia"><img src="img/githubicon.png" alt="github logo"></a>
+        <a href="https://www.linkedin.com/in/jason-quaglia/"><img src="img/linkedinicon.png" alt="" class="icon"></a>
+        <a href="https://github.com/jquaglia"><img src="img/githubicon.png" class="icon" alt="github logo"></a>
       </p>
 
 
-      <h2 id="clementh2">Clement Buchanan</h2>
-      <img src="img/Buchanan_Clement (1).jpg" class='hero' id="clement" alt="pic of clement buchanan">
+      <h2 id="clementh2" class="member-name">Clement Buchanan</h2>
+      <img src="img/Buchanan_Clement (1).jpg" class="hero" id="clement" alt="pic of clement buchanan">
 
 
       <p id="clementp" class="intro">I'm a Full Stack Software Developer and a veteran. You can learn about my
@@ -57,12 +42,12 @@
         analytics and informatics skills and an appreciation for UI/UX.</p>
       <p id="clement-links">
         <a href="https://www.linkedin.com/in/clement-buchanan-ma-mph-informatics-bb50a5a/"><img
-            src="img/linkedinicon.png" alt="linkedin logo"></a>
-        <a href="https://github.com/ClementBuchanan"><img src="img/githubicon.png" alt="github logo"></a>
+            src="img/linkedinicon.png" class="icon" alt="linkedin logo"></a>
+        <a href="https://github.com/ClementBuchanan"><img src="img/githubicon.png" alt="github logo" class="icon"></a>
       </p>
 
-      <h2>Sang Lee</h2>
-      <img src="img/sang.jpeg" id="sang" class='hero' alt="pic of sang lee">
+      <h2 class="member-name">Sang Lee</h2>
+      <img src="img/sang.jpeg" id="sang" class="hero" alt="pic of sang lee">
       <p class="intro">I am an experienced product leader with a track record of successful hardware product launches. I
         am on a
         journey to increase my technical depth into software product development, and as a veteran, am seeking a mission
@@ -71,13 +56,13 @@
         parent of two energetic boys, ages 4 and 2, who help bring fresh new perspective to the natural wonders of the
         Pacific Northwest, and life.</p>
       <p id="sang-links">
-        <a href="https://www.linkedin.com/in/sang-m-lee-7477a33/"><img src="img/linkedinicon.png"
+        <a href="https://www.linkedin.com/in/sang-m-lee-7477a33/"><img src="img/linkedinicon.png" class="icon"
             alt="linkedin logo"></a>
-        <a href="https://github.com/sangmlee76"><img src="img/githubicon.png" alt="github logo"></a>
+        <a href="https://github.com/sangmlee76"><img src="img/githubicon.png" class="icon" alt="github logo"></a>
       </p>
 
-      <h2 id="shayh2">Seamus Brown</h2>
-      <img src="img/shay.jpg" id="shay" class='hero' alt="pic of seamus brown">
+      <h2 id="shayh2" class="member-name">Seamus Brown</h2>
+      <img src="img/shay.jpg" id="shay" class="hero" alt="pic of seamus brown">
       <p id="shayp" class="intro">Before I dove into the tech world I worked a host of different jobs, primarily in
         customer service.
         I enjoyed
@@ -86,8 +71,9 @@
         more engaging to our customers. I find customer feedback an excellent inspiration to create better experiences
         and I'd love to integrate that passion into my work as a developer.</p>
       <p id="seamus-links">
-        <a href="https://www.linkedin.com/in/dlcalhoun/"><img src="/img/linkedinicon.png" alt="linkedin logo"></a>
-        <a href="https://github.com/dcalhoun286"><img src="img/githubicon.png" alt="github logo"></a>
+        <a href="https://www.linkedin.com/in/dlcalhoun/"><img src="/img/linkedinicon.png" class="icon"
+            alt="linkedin logo"></a>
+        <a href="https://github.com/dcalhoun286"><img src="img/githubicon.png" class="icon" alt="github logo"></a>
       </p>
 
     </ul>
