@@ -7,9 +7,9 @@
 <body>
   <%- include('../layout/header.ejs') %>
   <main>
-    <h3>Here are your recommendations based on the <span id="category">
+    <h2 id="recommend">Here are your recommendations for: <span id="category">
         <%= category %>
-      </span> category you selected</h3>
+      </span></h2>
     <div>
       <% for(let i=0; i < recs.length; i++) { %>
         <ul class="ul">
