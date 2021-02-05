@@ -36,15 +36,16 @@ function getIndex(req, res) {
 function makeSearch(req, res) {
   if (req.body.search[0] !== '') { //see comment below on res.redirect within this function on why this if statement was created
     const url = req.body.search[0];
-    // const url = 'https://pokeapi.co/api/v2/pokemon/ditto'
+
     superagent.get(url)
       .then(results => {
         const data = results.body;
+        //using pretty print JSON to make that JSON beautiful
         const html = prettyPrintJson.prettyPrintJson.toHtml(data);
         res.render('pages/search-results.ejs', { html: html, url: url });
       })
       .catch(error => {
-        // res.status(500).send('Error, search could not be completed');  //original code
+        //error handling
         res.status(500).render('pages/error.ejs');
         console.log(error);
       });
@@ -53,7 +54,7 @@ function makeSearch(req, res) {
   }
 };
 
-
+// saving responses user wants to save to the DB
 function saveResult(req, res) {
   const url = req.body.url;
   const codename = req.body.codename;
@@ -70,13 +71,13 @@ function saveResult(req, res) {
     });
 };
 
-
+//takes user to about us page
 function getAboutUs(req, res) {
   res.render('pages/about-us.ejs');
 
 };
 
-
+//retrieves the searches saved in db and renders them to page
 function getSavedSearches(req, res) {
   const sqlQuery = 'SELECT * FROM apis;';
   client.query(sqlQuery)
@@ -89,9 +90,10 @@ function getSavedSearches(req, res) {
     });
 };
 
-
+// displays recommended API's to the user
 function getRecApis(req, res) {
-  if (req.query.category !== 'default') {  //see comment below on res.redirect within this function on why this if statement was created
+  if (req.query.category !== 'default') {
+    //see comment below on res.redirect within this function on why this if statement was created
     const category = req.query.category;
     const url = `https://api.publicapis.org/entries?category=${category}`;
     superagent.get(url).then(obj => {
@@ -109,7 +111,7 @@ function getRecApis(req, res) {
 
 
 // ========= Helper Functions =========
-
+//recommended API constructor
 function RecommendedApi(obj) {
   this.name = obj.API;
   this.description = obj.Description;

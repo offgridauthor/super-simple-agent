@@ -1,9 +1,9 @@
 
-body{
+#about-us{
   min-width: 480px;
 }
 
-ul{
+#blurbs{
   display:grid;
   grid-template-columns: 480px;
   /* using fractions for dynamic display could use 250px instead for mobile display*/
@@ -12,25 +12,20 @@ ul{
   align-items: center;
 }
 
-h2{
+.member-name{
   justify-items: center;
   text-align: center;
   font-size: 18px;
 }
 
-li{
-  display: flex;
-  justify-items: center;
-  align-items: center;
-}
 
-img {
+#icon {
   justify-items: center;
   align-items: center;
   margin: auto;
 }
 
-p{
+.intro{
   text-align: justify;
   margin-left: 20px;
   margin-right: 20px;
@@ -44,6 +39,9 @@ p{
   max-height:500px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, .24), 0 1px 4px rgba(0, 0, 0, .48);
   border-radius: 20px;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
 
 }  
 
@@ -53,7 +51,7 @@ p{
 }
 
 @media (min-width: 768px){
-main{
+#about-us{
   margin: auto;
     display: flex;
     justify-content: center;
@@ -61,7 +59,7 @@ main{
     widows: 960px;
 }
 
-ul{
+#blurbs{
   display:grid;
   grid-template-columns: 480px 480px;
   /* using fractions for dynamic display could use 250px instead for mobile display */
