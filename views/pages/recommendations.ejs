@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/layout.css">
-  <link rel="stylesheet" href="/styles/modules.css">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-print-json@0.4/dist/pretty-print-json.css"> -->
-  <title>SuperSimpleAgent - Recommendations</title>
+  <%- include('../layout/head.ejs') %>
 </head>
 
 <body>
-  <header>
-    <h1>SuperSimpleAgent</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/collection">Collection</a>
-      <a href="/about-us">About Us</a>
-    </nav>
-  </header>
+  <%- include('../layout/header.ejs') %>
   <main>
     <h3>Here are your recommendations based on the <span id="category">
         <%= category %>
