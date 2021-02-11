@@ -17,10 +17,10 @@ function darkLight() {
   const el = document.body;
   el.classList.toggle('lightmode');
   const currentTheme = localStorage.getItem('currenttheme');
-  if (currentTheme === 'light') {
-    localStorage.setItem('currenttheme', 'dark');
+  if (currentTheme === 'lightmode') {
+    localStorage.setItem('currenttheme', 'darkmode');
   } else {
-    localStorage.setItem('currenttheme', 'light');
+    localStorage.setItem('currenttheme', 'lightmode');
   }
 }
 
