@@ -42,6 +42,8 @@ This is a mobile first app. The client is build using [EJS](https://ejs.co/) and
 
 1612461409989 - mobile styling entirely complete
 
+1612992980963 - Dark mode implemented. Footer elements made into ejs partials.
+
 ## Dependencies
 
 - beautify:

@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  margin-top: 5px;
+  padding-top: 5px;
   height: 75px;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -45,7 +45,7 @@ nav a {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 200px 200px 150px 150px 175px;
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .index article {
@@ -91,8 +91,8 @@ select {
 
 article {
   text-align: justify;
-  margin-left:10px;
-  margin-right:10px;  
+  padding-left:10px;
+  padding-right:10px;  
 }
 
 .search {
@@ -100,8 +100,9 @@ article {
 }
 
 main section {
-  margin-top: 20px;
+  padding-top: 20px;
 }
+
 
 .reccs {
   width:200px;
@@ -110,23 +111,15 @@ main section {
 }
 
 a {
-  margin-top:10px;
+  padding-top:10px;
 text-align: center;
 }
 
 footer {
-  margin: 10px;
+  /* margin: 10px; */
   padding: 20px;
 }
 
-footer section {
-  text-align: justify;
-  color: rgba(35,41,61, .6);
-}
-
-#json{
-  background-color: aliceblue;
-}
 
 /* for desktop view */
 @media (min-width: 768px){
@@ -140,8 +133,8 @@ header{
 
  main {
   margin: auto;
-  padding-top: 20px;
-  width:960px;
+  padding: 50px;
+  width:100%;
   }
   
   input {
