@@ -2,7 +2,7 @@
 
 **Authors**: Seamus Brown, Clement Buchanan, Sang Lee, Jason Quaglia
 
-**Version**: Collection 1.5.5
+**Version**: Collection 1.5.6
 
 ## Overview
 
@@ -42,7 +42,7 @@ This is a mobile first app. The client is build using [EJS](https://ejs.co/) and
 
 1612461409989 - mobile styling entirely complete
 
-1612992980963 - Dark mode implemented. Footer elements made into ejs partials.
+1612992980963 - Dark mode implemented. Footer elements made into ejs partials. ([@offgridauthor - Stephen Lloyd Webber](https://github.com/offgridauthor))
 
 ## Dependencies
 
